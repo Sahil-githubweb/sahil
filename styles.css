@@ -1,0 +1,647 @@
+/* Base Styles */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 80px 20px 120px;
+    min-height: 150px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('images/header-bg.jpg') center/cover;
+    position: relative;
+}
+
+.title-container {
+    text-align: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.title-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.title-box h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+.ann {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Date Section */
+.date-info {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: right;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Logo */
+.logo {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background: #f8f9fa;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+nav a {
+    background: white;
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    border: 2px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Individual Hover Colors */
+nav a:nth-child(1):hover { background: #b833ad; border-color: #b883ad; }
+nav a:nth-child(2):hover { background: #e74c3c; border-color: #e74c3c; }
+nav a:nth-child(3):hover { background: #2980b9; border-color: #2980b9; }
+nav a:nth-child(4):hover { background: green; border-color: green; }
+nav a:nth-child(5):hover { background: #d3942f; border-color: #d3942f; }
+/* ========== NEW FEATURED STORIES SECTION ========== */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.featured-stories {
+    display: grid;
+    gap: 30px;
+}
+
+.featured-story {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.featured-story:hover {
+    transform: translateY(-5px);
+}
+
+.featured-story img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.story-content {
+    padding: 20px;
+}
+
+.story-category {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.politics { background: #e74c3c; color: white; }
+.sports { background: #2980b9; color: white; }
+.health { background: #8e44ad; color: white; }
+.fashion { background: #f39c12; color: white; }
+
+.read-more {
+    display: inline-block;
+    color: #2c3e50;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.latest-updates {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.update-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.update-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.update-list li:last-child {
+    border-bottom: none;
+}
+
+.update-time {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+.update-excerpt {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* ====== Story Images ====== */
+.story-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* ====== Category Colors ====== */
+.legal { background: #2980b9; color: white; }
+.health { background: #8e44ad; color: white; }
+.fashion { background: #f39c12; color: white; }
+
+/* ====== Update List Enhancements ====== */
+.update-list li {
+    padding: 15px;
+    margin: 10px 0;
+    background: rgba(255,255,255,0.9);
+    border-radius: 6px;
+}
+
+.update-time {
+    font-weight: bold;
+    color: #2c3e50;
+}
+.back-button-container {
+    text-align: center;
+    margin: 40px 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    color: #bdc3c7;
+    padding: 0 10px;
+}
+
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-story img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .title-box {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .date-info {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    nav a {
+        width: 90%;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .logo {
+        width: 70px;
+        height: 70px;
+        left: 10px;
+    }
+    
+    .title-container {
+        margin: 0 80px;
+    }
+    
+    .featured-story img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-box h1 {
+        font-size: 1.8em;
+    }
+    
+    .ann {
+        font-size: 1em;
+    }
+    
+    .date-info {
+        font-size: 0.9em;
+    }
+}
+/* ========== FOOTER STYLES ========== */
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-section h4 {
+    color: #ecf0f1;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    line-height: 1.8;
+    color: #bdc3c7;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #e74c3c;
+}
+
+.footer-bottom {
+    background: #1a252f;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #7f8c8d;
+}
+/* ========== ARTICLE PAGE STYLES ========== */
+.article-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.article-header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.article-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.featured-image {
+    margin: 25px 0;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+figcaption {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.article-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.pull-quote {
+    border-left: 4px solid #e74c3c;
+    padding: 20px 30px;
+    margin: 30px 0;
+    background: #f8f9fa;
+    font-style: italic;
+    font-size: 1.2em;
+}
+/* Health & Education Specific Styles */
+.crisis-list {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+.crisis-list li {
+    margin: 15px 0;
+    padding-left: 10px;
+    border-left: 3px solid #8e44ad;
+}
+/* Business & Fashion Specific Styles */
+.stats-box {
+    background: #fef6eb;
+    border-left: 4px solid #f39c12;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 4px;
+}
+
+.resistance-list {
+    columns: 2;
+    margin: 25px 0;
+}
+
+.resistance-list li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.resistance-list li::before {
+    content: "•";
+    color: #f39c12;
+    position: absolute;
+    left: 15px;
+}
+
+.inline-image {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.inline-image img {
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pull-quote.resistance {
+    border-color: #8e44ad;
+    background: #f8f9fa;
+}
+/* ===== BACK BUTTON ===== */
+.back-button {
+    display: inline-block;
+    margin: 30px 0;
+    padding: 12px 25px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid #1a252f;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background: #e74c3c;
+    transform: translateY(-2px);
+    border-color: #e74c3c;
+}
+/* ========== FOOTER RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+/* ========== MOBILE RESPONSIVE ENHANCEMENTS ========== */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .main-header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: 15px;
+    }
+    
+    .date-info {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 10px;
+    }
+    
+    /* Navigation improvements */
+    nav {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+    nav a {
+        flex: 1 0 40%;
+        min-width: 120px;
+        margin: 5px;
+        text-align: center;
+    }
+    
+    /* Homepage grid adjustments */
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-story {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .featured-story img {
+        height: 200px;
+    }
+    
+    /* Article content adjustments */
+    .article-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .featured-image img {
+        height: 300px;
+    }
+    
+    .inline-image img {
+        width: 100%;
+    }
+    
+    .resistance-list {
+        columns: 1;
+    }
+    
+    .stats-box, .crisis-list {
+        padding: 15px;
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    /* Form adjustments */
+    .contact-form .form-group {
+        width: 100%;
+    }
+    
+    /* Back button adjustments */
+    .back-button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .divider {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further mobile optimizations */
+    .title-box h1 {
+        font-size: 1.5em;
+    }
+    
+    nav a {
+        flex: 1 0 100%;
+    }
+    
+    .featured-story img {
+        height: 150px;
+    }
+    
+    .featured-image img {
+        height: 200px;
+    }
+    
+    .article-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .pull-quote {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+    
+    .job-post {
+        margin-bottom: 20px;
+    }
+}
